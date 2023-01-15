@@ -17,17 +17,17 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import { useState } from 'react';
 import user from "../../assets/user.jpg";
-import { fontWeight } from '@mui/system';
 
 const Item = ({title, to, icon, selected, setSelected}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode)
   return (
     <MenuItem active={selected === title} style={{color: colors.grey[100]}} onClick={() => setSelected(title)} icon={icon}>
-      <Typography>
-        {title}
-      </Typography>
-      <Link to={to}/>
+      <Link to={to}>
+        <Typography>
+          {title}
+        </Typography>
+      </Link>
     </MenuItem>
   )
 }
@@ -95,6 +95,7 @@ const SideBar = () => {
           
 
             <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+
               <Item title="Dashboard" to="/" icon={<HomeOutlinedIcon/>} selected={selected} setSelected={setSelected}/>
               <Typography variant='h6' color={colors.grey[300]} sx ={{m: "15px 0 5px 20px"}}>Data</Typography>
               <Item title="Manage Team" to="/team" icon={<PeopleOutlinedIcon/>} selected={selected} setSelected={setSelected}/>
