@@ -8,6 +8,7 @@ import SideBar from "./scenes/global/SideBar"
 import Team from './scenes/team';
 import Contacts from "./scenes/contacts"
 import Invoices from "./scenes/invoices"
+import Form from './scenes/form';
 
 
 
@@ -27,7 +28,7 @@ const App = () => {
                             <Route path='/team' element={<Team/>}/>
                             <Route path='/contacts' element={<Contacts/>}/>
                             <Route path='/invoices' element={<Invoices/>}/>
-                            {/* <Route path='/form' element={<Form/>}/> */}
+                            <Route path='/form' element={<Form/>}/>
                             {/* <Route path='/bar' element={<Bar/>}/> */}
                             {/* <Route path='/pie' element={<Pie/>}/> */}
                             {/* <Route path='/line' element={<Line/>}/> */}
