@@ -10,7 +10,7 @@ const Faq = () => {
     const theme = useTheme()
     const colors = tokens(theme.palette.mode)
   return (
-    <Box>
+    <Box m="20px">
         <Header title= "FAQ" subtitle="Frequently Asked Questions Page"/>
         <Accordion defaultExpanded> 
             <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
